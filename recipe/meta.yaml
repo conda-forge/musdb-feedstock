@@ -1,5 +1,5 @@
 {% set name = "musdb" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27aac71095f919c7e0cfb526af1e6f745275645e959f759c42711354ea0fcbf7
+  sha256: f5426f7f073ef3a38aa672b6a7fa68c9b39bc3682672f4ca745fa020ecae94b3
 
 build:
-  number: 1
+  number: 0
   noarch: python
   # skip: true  # [win or py<36 or py38]
   entry_points:
@@ -45,7 +45,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Python parser and tools for MUSDB18 Music Separation Dataset'
+  summary: Python parser and tools for MUSDB18 Music Separation Dataset
   doc_url: https://sigsep.github.io/sigsep-mus-db
   dev_url: https://github.com/sigsep/sigsep-mus-db
 
