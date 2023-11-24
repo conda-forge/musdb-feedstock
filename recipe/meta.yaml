@@ -1,5 +1,5 @@
 {% set name = "musdb" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27aac71095f919c7e0cfb526af1e6f745275645e959f759c42711354ea0fcbf7
+  sha256: f835246ee7b3bc54599fd146e8e18e64ff7ee617e2265bf17ba62afb3daf2ec4
 
 build:
-  number: 1
+  number: 0
   noarch: python
   # skip: true  # [win or py<36 or py38]
   entry_points:
