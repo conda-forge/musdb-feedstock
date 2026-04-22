@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 27aac71095f919c7e0cfb526af1e6f745275645e959f759c42711354ea0fcbf7
 
 build:
-  number: 1
+  number: 2
   noarch: python
   # skip: true  # [win or py<36 or py38]
   entry_points:
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.7
     - pyaml
     - pysoundfile >=0.9.0
@@ -39,6 +39,7 @@ test:
     - musdbconvert --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/sigsep/sigsep-mus-db
